@@ -1,0 +1,17 @@
+node_modules/
+.next/
+dist/
+.turbo/
+.DS_Store
+
+# Env files (ignore at any depth)
+.env
+.env.local
+.env.development
+.env.production
+**/.env
+**/.env.*
+
+coverage/
+*.log
+*.tsbuildinfo
