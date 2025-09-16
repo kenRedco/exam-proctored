@@ -1,9 +1,9 @@
 {
-  "extends": "../../tsconfig.base.json",
+  "extends": ["../../tsconfig.base.json", "./tsconfig.paths.json"],
   "compilerOptions": {
     "jsx": "preserve",
     "module": "ESNext",
-    "moduleResolution": "Bundler",
+    "moduleResolution": "node",
     "noEmit": true,
     "allowJs": true,
     "plugins": [
@@ -12,13 +12,19 @@
       }
     ],
     "incremental": true,
-    "isolatedModules": true
+    "isolatedModules": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true,
+    "strict": true
   },
   "include": [
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
-    ".next/types/**/*.ts"
+    ".next/types/**/*.ts",
+    "next.config.mjs"
   ],
   "exclude": [
     "node_modules"
